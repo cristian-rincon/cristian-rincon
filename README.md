@@ -8,7 +8,7 @@
 Skills: Python / JS / HTML / CSS
 
 - 🔭 I’m currently working on I’m currently working on [Grupodot](https://www.grupodot.com/). 
-- 🌱 I’m currently learning I’m currently learning Datascience, Frontend 
+- 🌱 I’m currently learning Datascience, Frontend 
 - 👯 I’m looking to collaborate on open source Python projects. 
 - 🤔 I’m looking for help with Javascript and Frontend technologies. 
 - 📫 How to reach me: How to reach me: info@cristianrincon.co 
