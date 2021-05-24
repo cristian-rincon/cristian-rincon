@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Beautiful Jekyll 5.0.0 | Copyright Dean Attali 2020 -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+
+  
+
+  <title>Instalando y configurando un servidor Apache</title>
+
+  
+  <meta name="author" content="Cristian Rincón">
+  
+
+  <meta name="description" content="Desde tu localhost">
+
+  
+
+  
+
+  <link rel="alternate" type="application/rss+xml" title="Cristian Rincon" href="http://localhost:4000/feed.xml">
+
+  
+
+  
+
+  
+
+  
+
+
+  
+    
+      
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    
+      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/bootstrap-social.css">
+    
+      <link rel="stylesheet" href="/assets/css/beautifuljekyll.css">
+    
+  
+
+  
+
+  
+  
+  
+
+  
+
+  
+  <meta property="og:site_name" content="Cristian Rincon">
+  <meta property="og:title" content="Instalando y configurando un servidor Apache">
+  <meta property="og:description" content="Desde tu localhost">
+
+  
+  <meta property="og:image" content="http://localhost:4000/assets/img/apache-server.jpg">
+  
+
+  
+  <meta property="og:type" content="article">
+  <meta property="og:article:author" content="Cristian Rincón">
+  <meta property="og:article:published_time" content="2021-05-24T00:00:00-05:00">
+  <meta property="og:url" content="http://localhost:4000/2021-05-24-apache2-server-on-local/">
+  <link rel="canonical" href="http://localhost:4000/2021-05-24-apache2-server-on-local/">
+  
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <meta name="twitter:site" content="@uncristianr">
+  <meta name="twitter:creator" content="@uncristianr">
+
+  <meta property="twitter:title" content="Instalando y configurando un servidor Apache">
+  <meta property="twitter:description" content="Desde tu localhost">
+
+  
+  <meta name="twitter:image" content="http://localhost:4000/assets/img/apache-server.jpg">
+  
+
+  
+
+
+  
+
+  
+
+</head>
+
+
+<body>
+
+  
+
+
+  <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular"><a class="navbar-brand" href="http://localhost:4000/">Cristian Rincon</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="main-navbar">
+    <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/sobre-mi">Sobre mí</a>
+          </li></ul>
+  </div>
+
+  
+
+  
+
+</nav>
+
+
+  <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+
+  <div id="header-big-imgs" data-num-img=1
+    
+    
+    
+      
+      data-img-src-1="http://localhost:4000/assets/img/apache-server.jpg"
+    
+    
+    
+  ></div>
+
+
+<header class="header-section has-img">
+
+<div class="big-img intro-header">
+  <div class="container-md">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+        <div class="post-heading">
+          <h1>Instalando y configurando un servidor Apache</h1>
+          
+            
+              <h2 class="post-subheading">Desde tu localhost</h2>
+            
+          
+
+          
+            <span class="post-meta">Posted on May 24, 2021</span>
+            
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class='img-desc'></span>
+</div>
+
+<div class="intro-header no-img">
+  <div class="container-md">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+        <div class="post-heading">
+          <h1>Instalando y configurando un servidor Apache</h1>
+          
+            
+              <h2 class="post-subheading">Desde tu localhost</h2>
+            
+          
+
+          
+            <span class="post-meta">Posted on May 24, 2021</span>
+            
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+
+<div class=" container-md ">
+  <div class="row">
+    <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
+
+      
+
+      
+
+      <article role="main" class="blog-post">
+        <p class="box-note">En este tutorial te guiaré paso a paso para que crees tu propio servidor local utilizando Apache. Adicionalmente, aprenderemos a traer los datos de nuestro repositorio en github hasta el servidor y visualizarlos en la web.</p>
+
+<h2 id="antes-de-ello-comprendamos-qué-es-un-servidor-web">Antes de ello, comprendamos ¿qué es un servidor web?</h2>
+
+<p>Un servidor web es un programa que te permite mostrar los archivos que contienen las páginas web a los usuarios, en respuesta a sus solicitudes, las cuales son enviadas a través de internet. Sin embargo, hay computadoras y dispositivos dedicados que también pueden llamarse servidores web.</p>
+
+<p>En este tutorial vamos a ver cómo usar Apache para tener nuestro servidor usando nuestro propio computador.</p>
+
+<h2 id="pero-qué-es-apache">Pero, ¿Qué es Apache?</h2>
+<p>Apache es un software de servidor web gratuito y de código abierto creado para plataformas unix (Linux, Mac), el cual nos permite servir o mostrar las páginas de nuestro sitio.</p>
+
+<p>Ahora que ya sabemos esto, ¡comencemos!</p>
+
+<h2 id="paso-1--instalando-el-servidor">Paso 1 – Instalando el servidor</h2>
+<p>Como te mencioné anteriormente, Apache está enfocado para plataformas unix, para este tutorial vamos a utilizar una máquina en Linux Ubuntu 20.04 LTS.</p>
+
+<p>Apache se encuentra disponible dentro de los repositorios de software predeterminados de Ubuntu, esto nos facilita la instalación por medio de herramientas convencionales para administración de paquetes.</p>
+
+<p>Lo primero que haremos es actualizar nuestro índice de paquetes locales. Esto nos garantizará que en él se encuentren las versiones mas recientes de los paquetes.</p>
+
+<p>Siéntete libre de abrir la terminal de línea de comandos, en ubuntu puedes usar CTRL + ALT + T para abrirla.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt update
+Ahora, instalemos el paquete apache2:
+
+<span class="nb">sudo </span>apt <span class="nb">install </span>apache2
+</code></pre></div></div>
+
+<p>Luego de confirmar la instalación, apt instalará Apache al igual que todas las dependencias adicionales que requiera.</p>
+
+<h2 id="paso-2--configurar-el-cortafuegos-firewall">Paso 2 – Configurar el cortafuegos (Firewall)</h2>
+<p>Antes de comenzar a usar Apache, debemos modificar unas reglas del cortafuegos, de modo que se permita el acceso externo por defecto. Por defecto el cortafuegos está configurado con una restricción de acceso al servidor.</p>
+
+<p>Durante la instalación, Apache se registra en el UFW para proveer los perfiles que permitan habilitar o deshabilitar su acceso a través del cortafuego.</p>
+
+<p>Puedes listar los perfiles de ufw digitando:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>ufw app list
+</code></pre></div></div>
+<p>Esto te debe salir en consola:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Aplicaciones disponibles:
+  Apache
+  Apache Full
+  Apache Secure
+</code></pre></div></div>
+<p>Como hemos visto, existen tres perfiles disponibles para Apache, hablemos un poco de ellos:</p>
+
+<p>Apache: este perfil habilita únicamente el puerto 80 (normal, tráfico web sin encriptar).
+Apache Full: este perfil habilita dos puertos: puerto 80 (normal, tráfico web sin encriptar) y el puerto 443 (tráfico encriptado mediante TLS/SSL).
+Apache Secure: este perfil habilita únicamente el puerto 443 (tráfico encriptado mediante TLS/SSL).
+Es recomendable habilitar el perfil de mayor restricción en ambientes productivos. Como aún no tenemos SSL configurado y estamos en un ambiente de pruebas, permitiremos el tráfico a través del puerto 80 de la siguiente forma:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>ufw allow <span class="s1">'Apache'</span>
+</code></pre></div></div>
+<p>Podemos verificar el cambio escribiendo:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>ufw status
+</code></pre></div></div>
+<p>Debes recibir esta respuesta:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Estado: activo
+
+Hasta                      Acción      Desde
+<span class="nt">-----</span>                      <span class="nt">------</span>      <span class="nt">-----</span>
+Apache                     ALLOW       Anywhere                  
+Apache <span class="o">(</span>v6<span class="o">)</span>                ALLOW       Anywhere <span class="o">(</span>v6<span class="o">)</span>
+</code></pre></div></div>
+<p>Como puedes observar, el perfil ha sido activado, y el acceso al servidor web es permitido.</p>
+
+<p>Apache se inicia por defecto cuando termina la instalación, si quieres verificarlo, abre tu navegador y en el campo de direcciones puedes escribir localhost + ENTER.</p>
+
+<p>Si quieres aprender más acerca de todo lo que puedes hacer con tu servidor de apache, ingresa al Curso de Administración de Servidores Linux.</p>
+
+<h2 id="paso-3--clona-tu-sitio-desde-github-a-tu-servidor">Paso 3 – Clona tu sitio desde Github a tu servidor</h2>
+<p>Para realizar este paso, debemos saber que Apache toma los archivos del servidor desde la carpeta /var/www/html por defecto, así que allí es donde colocaremos nuesto sitio.</p>
+
+<p>Desde la terminal, nos movemos a la carpeta /var/www/html:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /var/www/html
+</code></pre></div></div>
+<p>Clonamos nuestro repositorio con git clone <url_repo>.</url_repo></p>
+
+<p>En este ejemplo usaré un repositorio que ya tengo creado, si deseas puedes clonarlo o hacer fork al mismo para crear tu propia versión.</p>
+
+<p>En esta carpeta es necesario un permiso de administrador para hacer algunas cosas, así que no olvides iniciar el comando con la palabra sudo.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>git clone https://github.com/cristian-rincon/css-google-clone.git
+</code></pre></div></div>
+<p>Si todo ha salido bien, te saldrá esto en consola:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Clonando en 'css-google-clone'...
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 9 (delta 1), reused 5 (delta 0), pack-reused 0
+Desempaquetando objetos: 100% (9/9), 3.18 KiB | 651.00 KiB/s, listo.
+</code></pre></div></div>
+<p>Ahora volvamos a nuestro navegador y escribamos localhost/css-google-clone/ + ENTER.</p>
+
+<p>Esto leerá el archivo index.html que se encuentra en el proyecto. Si usaste el repositorio que empleamos en este ejemplo, vas a ver un clon(visual) de Google.
+Google Clone</p>
+
+<p>A partir de aquí, puedes continuar con la creación de tu sitio web teniendo tu propio servidor local y realizar el versionamiento de tu proyecto con git y Github.</p>
+
+      </article>
+
+      
+        <div class="blog-tags">
+          <span>Tags:</span>
+          
+            <a href="/tags#backend">backend</a>
+          
+        </div>
+      
+
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+<section id = "social-share-section">
+  <span class="sr-only">Share: </span>
+
+  
+    <a href="https://twitter.com/intent/tweet?text=Instalando+y+configurando+un+servidor+Apache&url=http%3A%2F%2Flocalhost%3A4000%2F2021-05-24-apache2-server-on-local%2F"
+      class="btn btn-social-icon btn-twitter" title="Share on Twitter">
+      <span class="fab fa-fw fa-twitter" aria-hidden="true"></span>
+      <span class="sr-only">Twitter</span>
+    </a>
+  
+
+  
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2F2021-05-24-apache2-server-on-local%2F"
+      class="btn btn-social-icon btn-facebook" title="Share on Facebook">
+      <span class="fab fa-fw fa-facebook" aria-hidden="true"></span>
+      <span class="sr-only">Facebook</span>
+    </a>
+  
+
+  
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2F2021-05-24-apache2-server-on-local%2F"
+      class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
+      <span class="fab fa-fw fa-linkedin" aria-hidden="true"></span>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+  
+
+  
+
+  
+
+</section>
+
+
+
+      
+
+      <ul class="pagination blog-pager">
+        
+        
+      </ul>
+      
+  
+  
+  
+
+  
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+  <footer>
+  <div class="container-md beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      <ul class="list-inline text-center footer-links"><li class="list-inline-item">
+    <a href="mailto:cristian.rincon.dg@gmail.com" title="Email me">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Email me</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://www.facebook.com/uncristianr" title="Facebook">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Facebook</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://github.com/cristian-rincon" title="GitHub">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">GitHub</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://twitter.com/uncristianr" title="Twitter">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Twitter</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://linkedin.com/in/cristian-rincon" title="LinkedIn">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">LinkedIn</span>
+   </a>
+  </li></ul>
+
+      
+      <p class="copyright text-muted">
+      
+        Cristian Rincón
+        &nbsp;&bull;&nbsp;
+      
+      2021
+
+      
+        &nbsp;&bull;&nbsp;
+        <span class="author-site">
+          <a href="http://localhost:4000/">cristian-rincon.me</a>
+        </span>
+      
+
+      
+      </p>
+      <p class="theme-by text-muted">
+        Powered by
+        <a href="https://beautifuljekyll.com">Beautiful Jekyll</a>
+      </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  
+  
+    
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+  
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/beautifuljekyll.js"></script>
+    
+  
+
+
+
+
+
+
+
+
+
+</body>
+</html>

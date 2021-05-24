@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    
+    <title>Cristian Rincon</title>
+    
+    
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    
+    
+      <item>
+        <title>Instalando y configurando un servidor Apache</title>
+        <description>
+          Desde tu localhost - 
+          En este tutorial te guiaré paso a paso para que crees tu propio servidor local utilizando Apache. Adicionalmente, aprenderemos a traer los datos de nuestro repositorio en github hasta el servidor y visualizarlos en la web. Antes de ello, comprendamos ¿qué es un servidor web? Un servidor web es un...
+        </description>
+        <pubDate>Mon, 24 May 2021 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/2021-05-24-apache2-server-on-local/</link>
+        <guid isPermaLink="true">http://localhost:4000/2021-05-24-apache2-server-on-local/</guid>
+      </item>
+    
+  </channel>
+</rss>
