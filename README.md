@@ -6,7 +6,7 @@
 ![GitHub stats](https://github-readme-stats.vercel.app/api?username=cristian-rincon&show_icons=true)  
 ![Profile views](https://gpvc.arturio.dev/cristian-rincon)  
 
-Skills: Python / JS / HTML / CSS
+Skills: `Python / JS / HTML / CSS`
 
 - 🔭 I’m currently working on [Mercadolibre](https://www.mercadolibre.com.co/). 
 - 🌱 I’m currently learning Datascience, Backend and DevOps
