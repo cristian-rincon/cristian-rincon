@@ -23,13 +23,6 @@ A passionate Software Engineer from Colombia 🇨🇴
 
 [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' height='40'>](https://github.com/cristian-rincon) [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg' alt='linkedin' height='40'>](https://www.linkedin.com/in/cristian-rincon/) [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg' alt='twitter' height='40'>](https://twitter.com/uncristianr) [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/stackoverflow.svg' alt='stackoverflow' height='40'>](https://stackoverflow.com/users/12010919) [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/dev-dot-to.svg' alt='dev' height='40'>](https://dev.to/cristianrincon) 
 
-## Starred repos
-
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=cristian-rincon&repo=vote-app)](https://github.com/cristian-rincon/vote-app)
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=cristian-rincon&repo=action-dataflow-template)](https://github.com/cristian-rincon/action-dataflow-template)
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=cristian-rincon&repo=twitter-bot)](https://github.com/cristian-rincon/twitter-bot)
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=cristian-rincon&repo=python-ing-datos)](https://github.com/cristian-rincon/python-ing-datos)
-
 ## Wakatime report
 
 How i spend my coding time.
