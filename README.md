@@ -7,7 +7,7 @@ A passionate Software Engineer from Colombia 🇨🇴
 
 ## What i actually do
 
-- 🔭 I’m currently working at [Mercadolibre](https://www.mercadolibre.com.co/). 
+- 🔭 I’m currently working at [EPAM Systems](https://www.epam.com/). 
 - 🌱 I’m currently learning `DevOps` & `Machine Learning`.
 - 👯 I’m looking to collaborate on open source Python projects. 
 - 🤔 I’m looking for help with `Math, ML`. 
