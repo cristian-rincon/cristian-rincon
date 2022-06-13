@@ -1,5 +1,5 @@
 # Hi 👋, i'm Cristian [![My resume](https://img.shields.io/badge/See-My%20resume-success)](https://resume.io/r/CYnX5Fise) ![Profile views](https://gpvc.arturio.dev/cristian-rincon)
-A passionate Software Engineer from Colombia 🇨🇴
+A passionate Software Engineer from Colombia.
 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/cristianr)
 
