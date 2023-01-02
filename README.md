@@ -3,7 +3,7 @@ A passionate Software Engineer from Colombia.
 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/cristianr)
 
-![GitHub stats](https://github-readme-stats.vercel.app/api?username=cristian-rincon&show_icons=true&count_private=true)  
+![GitHub stats](https://github-readme-stats.vercel.app/api?username=cristian-rincon&show_icons=true&count_private=true)  [![GitHub Streak](https://streak-stats.demolab.com?user=cristian-rincon&hide_border=false)](https://git.io/streak-stats)
 
 ## What i actually do
 
@@ -12,6 +12,7 @@ A passionate Software Engineer from Colombia.
 - 👯 I’m looking to collaborate on open source Python projects. 
 - 🤔 I’m looking for help with `Math, ML`. 
 - 📫 How to reach me: How to reach me: cristian.o.rincon.b@gmail.com
+
 
 ## Skills
 
