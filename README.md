@@ -18,8 +18,6 @@ A passionate Software Engineer from Colombia.
 
 `Python / SQL / JS / HTML / CSS`
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=cristian-rincon&langs_count=8)](https://github.com/anuraghazra/github-readme-stats)
-
 ## Social links
 
 [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' height='40'>](https://github.com/cristian-rincon) [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg' alt='linkedin' height='40'>](https://www.linkedin.com/in/cristian-rincon/) [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg' alt='twitter' height='40'>](https://twitter.com/uncristianr) [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/stackoverflow.svg' alt='stackoverflow' height='40'>](https://stackoverflow.com/users/12010919) [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/dev-dot-to.svg' alt='dev' height='40'>](https://dev.to/cristianrincon) 
