@@ -1,8 +1,6 @@
 # Hi 👋, i'm Cristian [![My resume](https://img.shields.io/badge/See-My%20resume-success)](https://resume.io/r/CYnX5Fise) ![Profile views](https://gpvc.arturio.dev/cristian-rincon)
 A passionate Software Engineer from Colombia.
 
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/cristianr)
-
 ![GitHub stats](https://github-readme-stats.vercel.app/api?username=cristian-rincon&show_icons=true&count_private=true)  [![GitHub Streak](https://streak-stats.demolab.com?user=cristian-rincon&hide_border=false)](https://git.io/streak-stats)
 
 ## What i actually do
