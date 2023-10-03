@@ -1,7 +1,7 @@
 # Hi 👋, i'm Cristian [![My resume](https://img.shields.io/badge/See-My%20resume-success)](https://resume.io/r/CYnX5Fise) ![Profile views](https://komarev.com/ghpvc/?username=cristian-rincon)
 A passionate Software Engineer from Colombia.
 
-![GitHub stats](https://github-readme-stats.vercel.app/api?username=cristian-rincon&show_icons=true&count_private=true)  [![GitHub Streak](https://streak-stats.demolab.com?user=cristian-rincon&hide_border=false)](https://git.io/streak-stats)
+![GitHub stats](https://github-readme-stats.vercel.app/api?username=cristian-rincon&show_icons=true&count_private=true)
 
 ## What i actually do
 
