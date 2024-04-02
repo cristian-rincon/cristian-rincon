@@ -5,7 +5,7 @@ A passionate Software Engineer from Colombia.
 
 ## What i actually do
 
-- 🔭 I’m currently working at [@epam]([https://www.epam.com/](https://github.com/epam)). 
+- 🔭 I’m currently working at [epam]([https://www.epam.com/](https://github.com/epam)). 
 - 🌱 I’m currently learning `DevOps` & `Machine Learning`.
 - 👯 I’m looking to collaborate on open source Python projects. 
 - 🤔 I’m looking for help with `Math, ML`. 
