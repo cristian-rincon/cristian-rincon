@@ -9,7 +9,6 @@ A passionate Software Engineer from Colombia.
 - 🌱 I’m currently learning `DevOps` & `Machine Learning`.
 - 👯 I’m looking to collaborate on open source Python projects. 
 - 🤔 I’m looking for help with `Math, ML`. 
-- 📫 How to reach me: How to reach me: cristian.o.rincon.b@gmail.com
 
 
 ## Skills
